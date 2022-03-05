@@ -13,12 +13,12 @@
         <img class="" src="./img/logo.png" width="120" alt="">
         <h2 class="my-3 fw-bold">COUNTRY.INFO</h2>
         <div>
-            <button class="c-button btn mx-1 my-1">All</button>
-            <button class="c-button btn mx-1 my-1">Asia</button>
-            <button class="c-button btn mx-1 my-1">Europe</button>
-            <button class="c-button btn mx-1 my-1">Africa</button>
-            <button class="c-button btn mx-1 my-1">America</button>
-            <button class="c-button btn mx-1 my-1">Oceania</button>
+            <button class="c-button btn mx-1 my-1 active" onclick="loadAll()">All</button>
+            <button class="c-button btn mx-1 my-1" onclick="continenLoad('asia')">Asia</button>
+            <button class="c-button btn mx-1 my-1" onclick="continenLoad('europe')">Europe</button>
+            <button class="c-button btn mx-1 my-1" onclick="continenLoad('africa')">Africa</button>
+            <button class="c-button btn mx-1 my-1" onclick="continenLoad('america')">America</button>
+            <button class="c-button btn mx-1 my-1" onclick="continenLoad('oceania')">Oceania</button>
         </div>
         <div class="my-3 d-flex align-items-center justify-content-center">
             <input class="me-2" id="s-input" type="text" name="">
