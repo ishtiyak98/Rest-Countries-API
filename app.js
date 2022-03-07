@@ -37,7 +37,6 @@ const searchLoad = ()=>{
     const countryName = searchInput.value;
 
     const url = `https://restcountries.com/v3.1/name/${countryName}`;
-    console.log(url);
     
     fetch(url)
         .then(response => response.json())
@@ -50,15 +49,14 @@ const continenLoad = (continentName)=>{
     document.getElementById('spinner').style.display = 'block';
 
     const url = `https://restcountries.com/v3.1/region/${continentName}`;
-    console.log(url);
-    
+  
+
     fetch(url)
         .then(response => response.json())
         .then(data => showRegion(data))
 }
 
 const showRegion = (data)=>{
-    console.log(data);
     const countryField = document.getElementById('country');
     countryField.innerHTML = '';
 
