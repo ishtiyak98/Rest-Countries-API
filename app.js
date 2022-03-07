@@ -2,7 +2,7 @@ const loadAll = () =>{
     document.getElementById('spinner').style.display = 'block';
     fetch('https://restcountries.com/v2/all')
         .then(response => response.json())
-        .then(data => showALL(data)) 
+        .then(data => showALL(data));
 }
 
 const showALL = (data) =>{
@@ -31,21 +31,27 @@ const showALL = (data) =>{
     })
 }
 
-loadAll();
-
 const searchLoad = ()=>{
+    document.getElementById('spinner').style.display = 'block';
     const searchInput = document.getElementById('s-input');
     const countryName = searchInput.value;
-    const url = `https://restcountries.com/v2/name/${countryName}`;
+
+    const url = `https://restcountries.com/v3.1/name/${countryName}`;
     console.log(url);
+    
     fetch(url)
         .then(response => response.json())
-        .then(data => showALL(data)) 
+        .then(data => showRegion(data));
+
+    document.getElementById('s-input').value='';
 }
 
 const continenLoad = (continentName)=>{
+    document.getElementById('spinner').style.display = 'block';
+
     const url = `https://restcountries.com/v3.1/region/${continentName}`;
     console.log(url);
+    
     fetch(url)
         .then(response => response.json())
         .then(data => showRegion(data))
@@ -97,5 +103,5 @@ for (const element of buttons) {
     })
 }
 
-
+loadAll();
             
