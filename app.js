@@ -1,8 +1,8 @@
 const loadAll = () =>{
     document.getElementById('spinner').style.display = 'block';
-    fetch('https://restcountries.com/v3.1/all')
+    fetch('https://restcountries.com/v2/all')
         .then(response => response.json())
-        .then(data => showRegion(data)) 
+        .then(data => showALL(data)) 
 }
 
 const showALL = (data) =>{
@@ -86,12 +86,14 @@ const showRegion = (data)=>{
 //!------active button--------
 
 const buttons = document.getElementsByClassName('c-button');
+let activeBtn = null;
 
 for (const element of buttons) {
     element.addEventListener('click', ()=>{
-        var current = document.getElementsByClassName("active");
+        const current = document.getElementsByClassName('active');
+        current[0].className = current[0].className.replace(" active", "");
+        
         element.classList.add('active');
-        current.classList.remove('active');
     })
 }
 
