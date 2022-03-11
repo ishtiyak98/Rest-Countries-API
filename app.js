@@ -86,6 +86,15 @@ const showRegion = (data)=>{
     })
 }
 
+//!-----------Enter key search------
+
+const searchField = document.getElementById('s-input');
+searchField.addEventListener('keypress', (e)=>{
+    if(e.key=='Enter'){
+        searchLoad();
+    }
+})
+
 
 //!------active button--------
 
