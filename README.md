@@ -1,6 +1,6 @@
 # Rest-Countries-API
 
-### Live site 👉 https://rifat-ishtiyak.github.io/Rest-Countries-API
+### Live site 👉 https://ishtiyak98.github.io/Rest-Countries-API
 
 <br>
 
